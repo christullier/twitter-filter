@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Twitter User Tracker",
+    "description": "Replaces words with emojis.",
+    "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution",
+    "version": "1.0",
+    "icons": {
+      "48": "icons/icon.png",
+      "96": "icons/icon@2x.png"
+    },
+    "permissions": [
+      "<all_urls>",
+      "storage"
+    ],  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["substitute.js"]
+      }
+    ],
+    "sidebar_action": {
+      "default_icon": {
+       "32" : "icons/if_source_code_103710.svg"
+      },
+      "default_title": "User script",
+      "default_panel": "popup/user-script.html",
+      "browser_style": true
+    }
+  }
+  
